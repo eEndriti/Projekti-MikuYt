@@ -1,0 +1,98 @@
+
+.category-menu .bari{
+    width:fit-content;
+    float:right;
+    margin-top:20px;
+}
+
+.category-menu .bari{
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+    padding: 10px;
+    margin:5px;
+    font-family:"Tahoma";
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.category-menu .bari:hover{
+    background:transparent;
+    color:white;
+    border-radius: 50px;
+    transition: all 1s ease 0s;
+    border:3px solid green;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+}
+
+.category-menu * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+.category-menu {
+    width: 100%;
+}
+
+
+
+.smenu{
+    background: #333;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+}
+
+.smenu a{
+    display: block;
+    padding: 16px 26px;
+    color: white;
+    font-size: 14px;
+    margin: 4px 0;
+    position: relative;
+}
+
+.smenu a:before{
+    content: "";
+    width: 6px;
+    background: #3498db;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.smenu a:hover:before{
+    opacity: 1;
+}
+
+.item:target .smenu{
+    max-height: 20em;
+}
+
+.btn{
+    display: block;
+    padding: 16px 20px;
+    background: #3498db;
+    color: white;
+    position: relative;
+    border-radius:5px;
+}
+.btn:before{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background:#3498db;
+    left: 20px;
+    bottom: -7px;
+    transform: rotate(45deg);
+}
+
+.open .smenu {
+    opacity: 1;
+    overflow: auto;
+    max-height: 300px;
+}

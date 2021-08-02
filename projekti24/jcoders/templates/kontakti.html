@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kontakt form</title>
+    <link rel="stylesheet" href="kontakti.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style>
+    body{
+    overflow-x: hidden;
+
+
+}
+.peja  {
+    z-index: 1;
+    background-color: #5A9ABE;
+     box-shadow: 0px 0px 5px 0px black;
+}
+.teksti {
+ font-weight: bold;
+
+ text-align: center;
+}
+
+
+
+#animacioni {
+    background-color: lightgray;
+    height: 595px;
+    margin-top:-24px;
+}
+#animacioni img{
+    width:105%;
+    height:100%;
+    margin-left:0px;
+}
+
+#kontakt-form {
+    background-image:linear-gradient(#5a9abe,#eceefb);
+    height: 595px;
+    margin-top:-24px;
+}
+.form-group{
+  padding:0px 15px;
+}
+.form-group > input::placeholder {
+    color: #95C5DE;
+
+}
+
+.form-group > textarea::placeholder {
+    color: #95C5DE;
+}
+/*---------------------------------------ketu fillojn butonat e social media-------------------------*/
+
+  .btnsc{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background:transparent;
+    margin: 5px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: #1c2742;
+    overflow: hidden;
+    position: relative;
+    right:1%;
+  }
+  .btnsc i{
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.2s linear;
+    margin-top:-45%;
+  }
+  .btnsc:hover i{
+    transform: scale(1.3);
+    color: #f1f1f1;
+  }
+  .btnsc::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #3498db;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+  }
+  .btnsc:hover::before{
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10%;
+  }
+  @keyframes aaa {
+    0%{
+      left: -110%;
+      top: 90%;
+    }50%{
+      left: 10%;
+      top: -30%;
+    }100%{
+      top: -10%;
+      left: -10%;
+    }
+  }
+
+</style>
+</head>
+<body>
+    <!-----------------------pjesa e nav barit------------->
+<div class="container-fluid">
+    <div class="row">
+
+    </div>
+</div>
+<nav class="navbar navbar-expand-md navbar-light peja">
+  <a class="navbar-brand" href="#"><img src="/static/img/logomiku.png" width="50px"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav teksti"   >
+      <li class="nav-item" >
+        <a class="nav-link" href="/home/">Kryefaqja</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/kategorite/">Kategorit</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/rrethne/">Rreth ne</a>
+      </li>
+      <li class="nav-item">
+            <a class="nav-link" href="/kontakti/">Kontakti</a>
+          </li>
+    </ul>
+  </div>
+</nav>
+<br> <!-- ketu perfundon rreshti i pare-->
+
+        <div class="row">
+            <div class="col-lg-6" id="animacioni">
+                <img src="/static/img/animacioni.gif" alt="">
+            </div>
+            <div class="col-lg-6" id="kontakt-form" style="padding:10px;">
+                <h2 style="padding:0px 15px" >Kontakto</h2>
+                <form action="">
+                    <div class="form-group">
+                        <label for="subject">Subjekti:</label>
+                        <input type="text" id="subject" class="form-control" placeholder="Qellimi i kontaktit">
+                    </div> <!--Subjekti-->
+
+                    <div class="form-group">
+                        <label for="name">Emri dhe Mbiemri:</label>
+                        <input type="text" id="name" class="form-control" placeholder="Shenoni emrin dhe mbiemrin tuaj">
+                    </div> <!-- Emri Mbiemri -->
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" class="form-control" placeholder="Sheno emailin tuaj">
+                    </div> <!-- Email -->
+
+                    <div class="form-group">
+                        <label for="comment">Mesazhi juaj:</label>
+                        <textarea id="comment" cols="30" rows="5" class="form-control" placeholder="Shenoni mesazhin tuaj (max: 300 karaktere)"></textarea>
+                    </div> <!-- Mesazhi -->
+
+                    <div class="form-group">
+                        <input type="button" value="Dergo" class="btn btn-primary">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="padding: 0;">
+        <div class="row" style="position:relative; left:0; height:fit-content;  bottom:0; background-color:#317aa7;  ">
+            <div class="col-lg-12" style="text-align: center;">
+                <a class="btnsc" href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btnsc" href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <div class="row" style="position:relative; left:0;height:fit-content; bottom:0; background-color:#317aa7;  "></div>
+            <div class="col-lg-12" style="text-align: center; display: inline-block">
+                <p>
+                    Të gjitha të drejtat janë të rezervuara &copy; 2019 Mikuyt.com
+                </p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

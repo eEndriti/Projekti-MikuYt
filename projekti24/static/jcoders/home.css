@@ -1,0 +1,13 @@
+
+.tabbed {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 420px;
+}
+
+.tab-head {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: space-evenly;
+}

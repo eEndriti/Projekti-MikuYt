@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="home.css">
+  <title>Mikuyt.com</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        body{
+    overflow-x: hidden;
+
+
+}
+.peja  {
+    background-color: #5A9ABE;
+    animation:navbari 1s;
+    box-shadow: 0px 0px 5px 0px black;
+}
+.teksti {
+ font-weight: bold;
+
+ text-align: center;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .Search:hover > .Search-txt {
+        width: 160px !important;
+        padding: 0 6px;
+    }
+    .Search-btn:hover{
+        top:0px;
+    }
+}
+@media only screen and (max-width: 439px){
+
+    .Search:hover > .Search-txt {
+        width: 100px !important;
+        padding: 0 6px;
+    }
+    .Search-btn:hover{
+        top:0px;
+    }
+}
+
+/*---------------- ketu perfundon nav bari dhe fillon tabs--------------- */
+
+
+.tabs{
+    width:80%;
+    height:100px;
+    margin-left:20%;
+    margin-top:4%;
+    border-radius: 10px;
+
+  }
+
+  .tablink {
+  background-color: #1c2742;
+  color: #e0eefb;
+  float: left;
+  border:none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 15px;
+  width:26.6%;
+  font-weight: 500;
+
+
+  }
+
+  .tablink:hover  {
+  background-color: #777;
+
+
+  }
+
+  .tabcontent {
+  color: #1c2742;
+  display: none;
+  padding: 100px 20px;
+  height: 150px;
+  width:80%;
+  }
+
+  #Alfabeti,#Familja,#Esenciale {background-color: #e0eefb;}
+  #a{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+  }
+  #e{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+
+
+
+  /*----- ketu perfundon pjesa e tabs dhe fillon pjesa e search bar------- */
+
+.Search {
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #17252a;
+    height: 60px;
+    border-radius: 70px;
+    padding: 10px;
+    z-index: 1;
+  }
+
+  .Search:hover > .Search-txt {
+      width: 240px;
+      padding: 0 6px;
+  }
+
+  .Search:hover > .Search-btn {
+      background: #317aa7;
+      color: black;
+
+  }
+
+  .Search-btn {
+      color: #e84118;
+      float: right;
+      width: 45px;
+      margin-top:-2px;
+      height: 45px;
+      border-radius: 50%;
+      background: #317aa7;
+      display:flex;
+      transition: 0.4s;
+      color: white;
+      cursor: pointer;
+
+
+  }
+
+  .Search-btn > img {
+      width: 25px;
+      height: 25px;
+      position: relative;
+      left: 6px;
+      top: 6px;
+  }
+
+  .Search-txt {
+      border: none;
+      background: none;
+      outline: none;
+      float: left;
+      padding: 0;
+      color: white;
+      font-size: 16px;
+      transition: 0.4s;
+      line-height: 40px;
+      width: 0px;
+      font-weight: bold;
+  }
+
+  /*------ ketu perfundon pjesa e search bar dhe fillon gifi ---------*/
+.foto > img{
+    width: 60%;
+    position: relative;
+    display: inline-block;
+    margin-top:135px;
+    margin-left:21.9%;
+    opacity: 0.9;
+    border-radius: 10px;
+    border: 5px solid #17252a;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+/*---------------------------------------ketu fillojn butonat e social media-------------------------*/
+
+  .btnsc{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background:transparent;
+    margin: 5px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: #1c2742;
+    overflow: hidden;
+    position: relative;
+    right:1%;
+  }
+  .btnsc i{
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.2s linear;
+    margin-top:-45%;
+  }
+  .btnsc:hover i{
+    transform: scale(1.3);
+    color: #f1f1f1;
+  }
+  .btnsc::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #3498db;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+  }
+  .btnsc:hover::before{
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10%;
+  }
+  @keyframes aaa {
+    0%{
+      left: -110%;
+      top: 90%;
+    }50%{
+      left: 10%;
+      top: -30%;
+    }100%{
+      top: -10%;
+      left: -10%;
+    }
+  }
+  @keyframes navbari{
+    0%{
+     top:-100px;
+    }
+    100%{
+     top:0px;
+    }
+  }
+  @keyframes footer {
+    0%{
+      bottom:-100px;
+     }
+     100%{
+      bottom:0px;
+     }
+   }
+
+
+    </style>
+</head>
+<body style="background-image: url(/static/img/justphoto.jpg)">
+  <!-----------------------pjesa e nav barit------------->
+<div class="container-fluid">
+    <div class="row">
+
+    </div>
+</div>
+<nav class="navbar navbar-expand-md navbar-light peja">
+  <a class="navbar-brand" href="#"><img src="/static/img/logomiku.png" width="50px"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav teksti"   >
+      <li class="nav-item" >
+        <a class="nav-link" href="/home/">Kryefaqja</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/kategorite/">Kategorit</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/rrethne/">Rreth ne</a>
+      </li>
+      <li class="nav-item">
+            <a class="nav-link" href="/kontakti/">Kontakti</a>
+          </li>
+    </ul>
+  </div>
+</nav>
+<br>
+ <!-----------------------pjesa e search barit------------------------>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-1">
+
+    </div>
+    <div class="col-sm-10">
+      <form class="search-wrapper" method="get" action="{% url 'search' %}">
+        <div class="Search">
+            <input type="text" name="q" id="id_q" value="{{ query }}" class="Search-txt" placeholder="Kerko..."/>
+            <a class="Search-btn">
+                <img src="/static/img/searchlogo.png" alt="" style="margin-top:2px; right:3px;">
+            </a>
+        </div>
+    </form>
+    </div>
+    <div class="col-sm-1">
+
+    </div>
+  </div>
+</div>
+<!----------------------------------pjesa e gifit------------------------------->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-1">
+
+    </div>
+    <div class="col-sm-10">
+      <div class="foto">
+        <img src="/static/img/hero.gif" alt="">
+    </div>
+    </div>
+    <div class="col-sm-1">
+
+    </div>
+  </div>
+</div>
+ <!----------------------------------pjesa e tabs------------------------------->
+<div class="container">
+    <div class="row">
+      <div class="col-sm-1">
+
+      </div>
+      <div class="col-sm-10">
+          <div class="tabs">
+
+              <button class="tablink" id="a" onclick="openPage('Alfabeti', this, '#317aa7')">Alfabeti</button>
+              <button class="tablink" id="f" onclick="openPage('Familja', this,'#317aa7' )">Familja</button>
+              <button class="tablink" id="e" onclick="openPage('Esenciale', this, '#317aa7')">Esenciale</button>
+
+              <div id="Alfabeti" class="tabcontent">
+
+                <p>Home is where the heart is..</p>
+              </div>
+
+
+
+              <div id="Familja" class="tabcontent">
+
+                <p>Get in touch, or swing by for a cup of coffee.</p>
+              </div>
+
+              <div id="Esenciale" class="tabcontent">
+
+                <p>Who we are and what we do.</p>
+              </div>
+             </div>
+
+      </div>
+      <div class="col-sm-1">
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid footer" style="padding: 0;">
+        <div class="row" style="position:relative; left:0; height:fit-content; margin-top:130px; bottom:0; background-color:#317aa7;  ">
+            <div class="col-lg-12" style="text-align: center;">
+                <a class="btnsc" href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btnsc" href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <div class="row" style="position:relative; left:0;height:fit-content; bottom:0; background-color:#317aa7;  "></div>
+            <div class="col-lg-12" style="text-align: center; display: inline-block">
+                <p>
+                    Të gjitha të drejtat janë të rezervuara &copy; 2019 Mikuyt.com
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+<!----------------------------------pjesa e javascript------------------------------->
+ <script>
+
+ function openPage(pageName, elmnt, color) {
+   // Hide all elements with class="tabcontent" by default */
+   var i, tabcontent, tablinks;
+   tabcontent = document.getElementsByClassName("tabcontent");
+   for (i = 0; i < tabcontent.length; i++) {
+     tabcontent[i].style.display = "none";
+   }
+
+   // Remove the background color of all tablinks/buttons
+   tablinks = document.getElementsByClassName("tablink");
+   for (i = 0; i < tablinks.length; i++) {
+     tablinks[i].style.backgroundColor = "";
+   }
+
+   // Show the specific tab content
+   document.getElementById(pageName).style.display = "block";
+
+   // Add the specific color to the button used to open the tab content
+   elmnt.style.backgroundColor = color;
+ }
+
+ // Get the element with id="defaultOpen" and click on it
+ document.getElementById("defaultOpen").click();
+ </script>
+
+</body>
+</html>
